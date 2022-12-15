@@ -8,6 +8,19 @@ console.log(window.n, n);
 
 var email = "dooly@naver.com";
 console.log(window.email, email);
+
+// 팝업창
+setTimeout(function() {
+	var child = window.open("popup.html", "popup", "width=600, height=400");
+	setTimeout(function(){
+		// 자식창의 내용 바꾸기.
+		child.document.write("<h1>popup contents changed</h1>");
+	}, 2000);
+	setTimeout(function(){
+		// child(자식창의 window 객체) 이동
+		child.moveTo(200, 200);
+	}, 4000);
+}, 2000);
 </script>	
 </head>
 <body>
