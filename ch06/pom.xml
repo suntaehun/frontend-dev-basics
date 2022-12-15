@@ -5,9 +5,9 @@
 		<artifactId>frontend-dev-basics</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>ch05</artifactId>
+	<artifactId>ch06</artifactId>
 	<packaging>war</packaging>
 	<build>
-		<finalName>ch05</finalName>
+		<finalName>ch06</finalName>
 	</build>
 </project>

@@ -26,6 +26,20 @@
     3. var f = new Function(....)
 */
 
+/*
+자바스크립트 객체를 분류하는 또 다른 방법
+1. 내장 객체:
+	- JavaScript Engine 내부에 미리 내장되어 있는 객체
+	- Number, Boolean, Date, RegExp, Array, Object, ... : 생성자 함수
+	- parseInt, setTimout, setInterval, ... : 일반 함수
+2. 호스트 객체:
+	- JavaScript Engine이 embeded 되어있는 환경에 있는 객체
+	- Browser가 호스트인 경우: screen, localtion*, navigator*, DOM***, XmlHttprequest***, ...
+	- Node가 호스트인 경우: http, os, fs, path, process, ...
+3. 사용자 객체
+	- 자바스크립트 엔진이 실행되면서 생성되는 객체
+*/
+
 console.log("=====기본타입(undefined, number, string, boolean)=====");
 var u = undefined; // var u; 동일, 선언 정의가 구분이 없다.
 var i = 10;
