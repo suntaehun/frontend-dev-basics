@@ -48,21 +48,25 @@ console.log("==========가변 파라미터 함수 sum()==========");
 var sum = function() {
     var s = 0;
 
-    console.log(arguments instanceof Array, arguments.length);
-    for(let i = 0; i < arguments.length; i++) {
-        s += arguments[i];
-    }
+    console.log(arguments instanceof Array, arguments instanceof Object, arguments.length);
+    // for(let i = 0; i < arguments.length; i++) {
+    //     s += arguments[i];
+    // }
 
     // Error
     // arguments의 __proto__는 Object prototype에 chain이 되어있기 때문에 오류!
     // arguments.forEach(function(e) {
-        s += e;
+    //     s += e;
     // });
+
+    Array.prototype.forEach.call(arguments, function(e) {
+        s += e;
+    })
+
     return s;
 }
 
 console.log(sum(1));
 console.log(sum(1, 2));
-console.log(sum(1, 2, 3));
 console.log(sum(1, 2, 3, 4));
 console.log(sum(1, 2, 3, 4, 5, 6));
